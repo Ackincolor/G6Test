@@ -9,9 +9,15 @@
     <p>Welcome to <%= title %></p>
   <ul>
     liste :
-    <% testValue.forEach(function(line){ %>
-      <li>-</li>
-    <%});%>
+    <% if (testValue.length) {
+    %><ul>
+      <% testValue.forEach((book) => {
+      %>
+        <li><%= book.id %> <%= book.nom %></li>
+      <%
+      }) %>
+    </ul><%
+    } %>
   </ul>
   </body>
 </html>

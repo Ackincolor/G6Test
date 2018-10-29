@@ -3,10 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var resultdata = [];
+  var resultdata = 'dfskjhl';
   global.db.query("SELECT * FROM test").then(data => {
     console.log(data);
-    resultdata.push(data);
+    resultdata= data;
 
   }).then(function()
       {
